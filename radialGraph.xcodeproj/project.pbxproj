@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B367F4F51CE54CD400C17D3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B367F4F41CE54CD400C17D3E /* AppDelegate.swift */; };
+		B367F4F71CE54CD400C17D3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B367F4F61CE54CD400C17D3E /* ViewController.swift */; };
+		B367F4FA1CE54CD400C17D3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B367F4F81CE54CD400C17D3E /* Main.storyboard */; };
+		B367F4FC1CE54CD400C17D3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B367F4FB1CE54CD400C17D3E /* Assets.xcassets */; };
+		B367F4FF1CE54CD400C17D3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B367F4FD1CE54CD400C17D3E /* LaunchScreen.storyboard */; };
+		B367F50A1CE54CD500C17D3E /* radialGraphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B367F5091CE54CD500C17D3E /* radialGraphTests.swift */; };
+		B367F5151CE54CD500C17D3E /* radialGraphUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B367F5141CE54CD500C17D3E /* radialGraphUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B367F5061CE54CD500C17D3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B367F4E91CE54CD400C17D3E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B367F4F01CE54CD400C17D3E;
+			remoteInfo = radialGraph;
+		};
+		B367F5111CE54CD500C17D3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B367F4E91CE54CD400C17D3E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B367F4F01CE54CD400C17D3E;
+			remoteInfo = radialGraph;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B367F4F11CE54CD400C17D3E /* radialGraph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = radialGraph.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B367F4F41CE54CD400C17D3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B367F4F61CE54CD400C17D3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B367F4F91CE54CD400C17D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B367F4FB1CE54CD400C17D3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B367F4FE1CE54CD400C17D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B367F5001CE54CD400C17D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B367F5051CE54CD500C17D3E /* radialGraphTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = radialGraphTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B367F5091CE54CD500C17D3E /* radialGraphTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = radialGraphTests.swift; sourceTree = "<group>"; };
+		B367F50B1CE54CD500C17D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B367F5101CE54CD500C17D3E /* radialGraphUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = radialGraphUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B367F5141CE54CD500C17D3E /* radialGraphUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = radialGraphUITests.swift; sourceTree = "<group>"; };
+		B367F5161CE54CD500C17D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B367F4EE1CE54CD400C17D3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B367F5021CE54CD500C17D3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B367F50D1CE54CD500C17D3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B367F4E81CE54CD400C17D3E = {
+			isa = PBXGroup;
+			children = (
+				B367F4F31CE54CD400C17D3E /* radialGraph */,
+				B367F5081CE54CD500C17D3E /* radialGraphTests */,
+				B367F5131CE54CD500C17D3E /* radialGraphUITests */,
+				B367F4F21CE54CD400C17D3E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B367F4F21CE54CD400C17D3E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B367F4F11CE54CD400C17D3E /* radialGraph.app */,
+				B367F5051CE54CD500C17D3E /* radialGraphTests.xctest */,
+				B367F5101CE54CD500C17D3E /* radialGraphUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B367F4F31CE54CD400C17D3E /* radialGraph */ = {
+			isa = PBXGroup;
+			children = (
+				B367F4F41CE54CD400C17D3E /* AppDelegate.swift */,
+				B367F4F61CE54CD400C17D3E /* ViewController.swift */,
+				B367F4F81CE54CD400C17D3E /* Main.storyboard */,
+				B367F4FB1CE54CD400C17D3E /* Assets.xcassets */,
+				B367F4FD1CE54CD400C17D3E /* LaunchScreen.storyboard */,
+				B367F5001CE54CD400C17D3E /* Info.plist */,
+			);
+			path = radialGraph;
+			sourceTree = "<group>";
+		};
+		B367F5081CE54CD500C17D3E /* radialGraphTests */ = {
+			isa = PBXGroup;
+			children = (
+				B367F5091CE54CD500C17D3E /* radialGraphTests.swift */,
+				B367F50B1CE54CD500C17D3E /* Info.plist */,
+			);
+			path = radialGraphTests;
+			sourceTree = "<group>";
+		};
+		B367F5131CE54CD500C17D3E /* radialGraphUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B367F5141CE54CD500C17D3E /* radialGraphUITests.swift */,
+				B367F5161CE54CD500C17D3E /* Info.plist */,
+			);
+			path = radialGraphUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B367F4F01CE54CD400C17D3E /* radialGraph */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B367F5191CE54CD500C17D3E /* Build configuration list for PBXNativeTarget "radialGraph" */;
+			buildPhases = (
+				B367F4ED1CE54CD400C17D3E /* Sources */,
+				B367F4EE1CE54CD400C17D3E /* Frameworks */,
+				B367F4EF1CE54CD400C17D3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = radialGraph;
+			productName = radialGraph;
+			productReference = B367F4F11CE54CD400C17D3E /* radialGraph.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B367F5041CE54CD500C17D3E /* radialGraphTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B367F51C1CE54CD500C17D3E /* Build configuration list for PBXNativeTarget "radialGraphTests" */;
+			buildPhases = (
+				B367F5011CE54CD500C17D3E /* Sources */,
+				B367F5021CE54CD500C17D3E /* Frameworks */,
+				B367F5031CE54CD500C17D3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B367F5071CE54CD500C17D3E /* PBXTargetDependency */,
+			);
+			name = radialGraphTests;
+			productName = radialGraphTests;
+			productReference = B367F5051CE54CD500C17D3E /* radialGraphTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B367F50F1CE54CD500C17D3E /* radialGraphUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B367F51F1CE54CD500C17D3E /* Build configuration list for PBXNativeTarget "radialGraphUITests" */;
+			buildPhases = (
+				B367F50C1CE54CD500C17D3E /* Sources */,
+				B367F50D1CE54CD500C17D3E /* Frameworks */,
+				B367F50E1CE54CD500C17D3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B367F5121CE54CD500C17D3E /* PBXTargetDependency */,
+			);
+			name = radialGraphUITests;
+			productName = radialGraphUITests;
+			productReference = B367F5101CE54CD500C17D3E /* radialGraphUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B367F4E91CE54CD400C17D3E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Connor Holowachuk";
+				TargetAttributes = {
+					B367F4F01CE54CD400C17D3E = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = RBMZ4S2PT3;
+					};
+					B367F5041CE54CD500C17D3E = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = RBMZ4S2PT3;
+						TestTargetID = B367F4F01CE54CD400C17D3E;
+					};
+					B367F50F1CE54CD500C17D3E = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = RBMZ4S2PT3;
+						TestTargetID = B367F4F01CE54CD400C17D3E;
+					};
+				};
+			};
+			buildConfigurationList = B367F4EC1CE54CD400C17D3E /* Build configuration list for PBXProject "radialGraph" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B367F4E81CE54CD400C17D3E;
+			productRefGroup = B367F4F21CE54CD400C17D3E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B367F4F01CE54CD400C17D3E /* radialGraph */,
+				B367F5041CE54CD500C17D3E /* radialGraphTests */,
+				B367F50F1CE54CD500C17D3E /* radialGraphUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B367F4EF1CE54CD400C17D3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B367F4FF1CE54CD400C17D3E /* LaunchScreen.storyboard in Resources */,
+				B367F4FC1CE54CD400C17D3E /* Assets.xcassets in Resources */,
+				B367F4FA1CE54CD400C17D3E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B367F5031CE54CD500C17D3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B367F50E1CE54CD500C17D3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B367F4ED1CE54CD400C17D3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B367F4F71CE54CD400C17D3E /* ViewController.swift in Sources */,
+				B367F4F51CE54CD400C17D3E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B367F5011CE54CD500C17D3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B367F50A1CE54CD500C17D3E /* radialGraphTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B367F50C1CE54CD500C17D3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B367F5151CE54CD500C17D3E /* radialGraphUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B367F5071CE54CD500C17D3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B367F4F01CE54CD400C17D3E /* radialGraph */;
+			targetProxy = B367F5061CE54CD500C17D3E /* PBXContainerItemProxy */;
+		};
+		B367F5121CE54CD500C17D3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B367F4F01CE54CD400C17D3E /* radialGraph */;
+			targetProxy = B367F5111CE54CD500C17D3E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B367F4F81CE54CD400C17D3E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B367F4F91CE54CD400C17D3E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B367F4FD1CE54CD400C17D3E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B367F4FE1CE54CD400C17D3E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B367F5171CE54CD500C17D3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B367F5181CE54CD500C17D3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B367F51A1CE54CD500C17D3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = radialGraph/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "WiMP-Games.radialGraph";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B367F51B1CE54CD500C17D3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = radialGraph/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "WiMP-Games.radialGraph";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B367F51D1CE54CD500C17D3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = radialGraphTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "WiMP-Games.radialGraphTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/radialGraph.app/radialGraph";
+			};
+			name = Debug;
+		};
+		B367F51E1CE54CD500C17D3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = radialGraphTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "WiMP-Games.radialGraphTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/radialGraph.app/radialGraph";
+			};
+			name = Release;
+		};
+		B367F5201CE54CD500C17D3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = radialGraphUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "WiMP-Games.radialGraphUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = radialGraph;
+			};
+			name = Debug;
+		};
+		B367F5211CE54CD500C17D3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = radialGraphUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "WiMP-Games.radialGraphUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = radialGraph;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B367F4EC1CE54CD400C17D3E /* Build configuration list for PBXProject "radialGraph" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B367F5171CE54CD500C17D3E /* Debug */,
+				B367F5181CE54CD500C17D3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B367F5191CE54CD500C17D3E /* Build configuration list for PBXNativeTarget "radialGraph" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B367F51A1CE54CD500C17D3E /* Debug */,
+				B367F51B1CE54CD500C17D3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B367F51C1CE54CD500C17D3E /* Build configuration list for PBXNativeTarget "radialGraphTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B367F51D1CE54CD500C17D3E /* Debug */,
+				B367F51E1CE54CD500C17D3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B367F51F1CE54CD500C17D3E /* Build configuration list for PBXNativeTarget "radialGraphUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B367F5201CE54CD500C17D3E /* Debug */,
+				B367F5211CE54CD500C17D3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B367F4E91CE54CD400C17D3E /* Project object */;
+}
