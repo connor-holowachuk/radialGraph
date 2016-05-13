@@ -14,6 +14,7 @@
 		B367F4FF1CE54CD400C17D3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B367F4FD1CE54CD400C17D3E /* LaunchScreen.storyboard */; };
 		B367F50A1CE54CD500C17D3E /* radialGraphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B367F5091CE54CD500C17D3E /* radialGraphTests.swift */; };
 		B367F5151CE54CD500C17D3E /* radialGraphUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B367F5141CE54CD500C17D3E /* radialGraphUITests.swift */; };
+		B367F5251CE54EB200C17D3E /* Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = B367F5241CE54EB200C17D3E /* Draw.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		B367F5101CE54CD500C17D3E /* radialGraphUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = radialGraphUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B367F5141CE54CD500C17D3E /* radialGraphUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = radialGraphUITests.swift; sourceTree = "<group>"; };
 		B367F5161CE54CD500C17D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B367F5241CE54EB200C17D3E /* Draw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Draw.swift; path = ../Draw.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				B367F4F41CE54CD400C17D3E /* AppDelegate.swift */,
 				B367F4F61CE54CD400C17D3E /* ViewController.swift */,
+				B367F5241CE54EB200C17D3E /* Draw.swift */,
 				B367F4F81CE54CD400C17D3E /* Main.storyboard */,
 				B367F4FB1CE54CD400C17D3E /* Assets.xcassets */,
 				B367F4FD1CE54CD400C17D3E /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B367F5251CE54EB200C17D3E /* Draw.swift in Sources */,
 				B367F4F71CE54CD400C17D3E /* ViewController.swift in Sources */,
 				B367F4F51CE54CD400C17D3E /* AppDelegate.swift in Sources */,
 			);
