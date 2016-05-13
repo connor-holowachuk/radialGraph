@@ -15,8 +15,8 @@ class Draw: UIView {
         let pi = 3.14159265358979323846264338327950288
         
         
-        let businessNames = ["Green Bean", "Soup r' Salad", "Sam's Bar", "Tequila Bob's", "Starbucks"]
-        let businessPayments: [Double] = [4.27, 1.22, 3.20, 0.27, 6.78]
+        let businessNames = ["Green Bean", "Soup r' Salad", "Sam's Bar", "Tequila Bob's", "Starbucks", "Jimmy G's", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen"]
+        let businessPayments: [Double] = [4.27, 5.22, 5.20, 4.27, 6.18, 5.78, 3.45, 3.89, 5.02, 6.06, 4.03, 3.09, 3.23, 5.98]
         var businessPaymentsScaled: [Double] = [] //max is 0.8607309
         let numberOfBusinesses: Int = businessNames.count
         
@@ -25,7 +25,7 @@ class Draw: UIView {
         let outerRadius = self.frame.height / 6.0
         let middleRadius = outerRadius * 2.0 / 3.0
         let innerRadius = middleRadius * 0.5
-        let centerPoint = CGPointMake(self.frame.width * 0.5, self.frame.height - (outerRadius * 1.5))
+        let centerPoint = CGPointMake(self.frame.width * 0.5, self.frame.height - (outerRadius * 1.333333))
         
         var outerPointsArray: [CGPoint] = []
         
@@ -38,7 +38,7 @@ class Draw: UIView {
         let innerCircleRect = CGRect(x: centerPoint.x - innerRadius, y: centerPoint.y - innerRadius, width: 2.0 * innerRadius, height: 2.0 * innerRadius)
         let innerCircle = UIBezierPath(ovalInRect: innerCircleRect)
         
-        UIColor.lightGrayColor().colorWithAlphaComponent(0.6).setStroke()
+        UIColor.lightGrayColor().colorWithAlphaComponent(0.4).setStroke()
         outerCircle.stroke()
         middleCircle.stroke()
         innerCircle.stroke()
@@ -145,51 +145,66 @@ class Draw: UIView {
         bezierPath.lineWidth = 2.0
         UIColor.cyanColor().colorWithAlphaComponent(0.9).setStroke()
         
+        let basePointCPD: CGFloat = 100.0 / CGFloat(numberOfBusinesses)
+        let baseIntermediateCPD = basePointCPD * 1.618033 * 1.618033
         
-        let paymentPointX = centerPoint.x - CGFloat(businessPaymentsScaled[0]) * (centerPoint.x - outerPointsArray[0].x)
-        let paymentPointY = centerPoint.y - CGFloat(businessPaymentsScaled[0]) * (centerPoint.y - outerPointsArray[0].y)
-        let paymentPoint = CGPointMake(paymentPointX, paymentPointY)
-        
-        bezierPath.moveToPoint(paymentPoint)
-        
-        var intermediatePointDFC: CGFloat!
-        if businessPaymentsScaled[0] >= businessPaymentsScaled[1] {
-            intermediatePointDFC = CGFloat(businessPaymentsScaled[1]) / 1.618033 * outerRadius
-        } else {
-            intermediatePointDFC = CGFloat(businessPaymentsScaled[0]) / 1.618033 * outerRadius
+        for index in 0...numberOfBusinesses - 1 {
+            var nextIndex = index + 1
+            if nextIndex >= numberOfBusinesses {
+                nextIndex = 0
+            }
+            let angleForIndex = Double(index) * angleBetweenLines
+            let nextAngleForIndex = Double(nextIndex) * angleBetweenLines
+            
+            let paymentPointX = centerPoint.x - CGFloat(businessPaymentsScaled[index]) * (centerPoint.x - outerPointsArray[index].x)
+            let paymentPointY = centerPoint.y - CGFloat(businessPaymentsScaled[index]) * (centerPoint.y - outerPointsArray[index].y)
+            let paymentPoint = CGPointMake(paymentPointX, paymentPointY)
+            
+            bezierPath.moveToPoint(paymentPoint)
+            
+            var intermediatePointDFC: CGFloat!
+            if businessPaymentsScaled[index] >= businessPaymentsScaled[nextIndex] {
+                intermediatePointDFC = CGFloat(businessPaymentsScaled[nextIndex]) / 1.618033 * outerRadius
+            } else {
+                intermediatePointDFC = CGFloat(businessPaymentsScaled[index]) / 1.618033 * outerRadius
+            }
+            
+            let intermediatePointX = centerPoint.x + (intermediatePointDFC * CGFloat(sin(angleBetweenLines / 2.0 + angleForIndex)))
+            let intermediatePointY = centerPoint.y - (intermediatePointDFC * CGFloat(cos(angleBetweenLines / 2.0 + angleForIndex)))
+            let intermediatePoint = CGPointMake(intermediatePointX, intermediatePointY)
+            
+            print("\(centerPoint.x - intermediatePoint.x), \(centerPoint.y - intermediatePoint.y)")
+            
+            let controlLengthOne: CGFloat = calculateMagnitude(centerPoint.x - paymentPointX, y: centerPoint.y - paymentPointY) / outerRadius * basePointCPD
+            let paymentPointCPX: CGFloat = paymentPointX + controlLengthOne * CGFloat(cos(angleForIndex))
+            let paymentPointCPY: CGFloat = paymentPointY + controlLengthOne * CGFloat(sin(angleForIndex))
+            let paymentPointCP = CGPointMake(paymentPointCPX, paymentPointCPY)
+            
+            let controlLengthTwo: CGFloat = calculateMagnitude(centerPoint.x - intermediatePointX, y: centerPoint.y - intermediatePointY) / outerRadius * baseIntermediateCPD
+            let intermediatePointCPX: CGFloat = intermediatePointX - (controlLengthTwo * CGFloat(cos(angleBetweenLines / 2.0 + angleForIndex)))
+            let intermediatePointCPY: CGFloat = intermediatePointY - (controlLengthTwo * CGFloat(sin(angleBetweenLines / 2.0 + angleForIndex)))
+            let intermediatePointCP = CGPointMake(intermediatePointCPX, intermediatePointCPY)
+            
+            bezierPath.addCurveToPoint(intermediatePoint, controlPoint1: paymentPointCP, controlPoint2: intermediatePointCP)
+            
+            let nextPointX = centerPoint.x - CGFloat(businessPaymentsScaled[nextIndex]) * (centerPoint.x - outerPointsArray[nextIndex].x)
+            let nextPointY = centerPoint.y - CGFloat(businessPaymentsScaled[nextIndex]) * (centerPoint.y - outerPointsArray[nextIndex].y)
+            let nextPoint = CGPointMake(nextPointX, nextPointY)
+            
+            let controlLengthThree: CGFloat = calculateMagnitude(centerPoint.x - nextPointX, y: centerPoint.y - nextPointY) / outerRadius * basePointCPD
+            
+            let nextPointCPX = nextPointX - (controlLengthThree * CGFloat(cos(nextAngleForIndex)))
+            let nextPointCPY = nextPointY - (controlLengthThree * CGFloat(sin(nextAngleForIndex)))
+            let nextPointCP = CGPointMake(nextPointCPX, nextPointCPY)
+            
+            let intermediatePointCPX2 = intermediatePointX + (controlLengthTwo * CGFloat(cos(angleBetweenLines / 2.0 + angleForIndex)))
+            let intermediatePointCPY2 = intermediatePointY + (controlLengthTwo * CGFloat(sin(angleBetweenLines / 2.0 + angleForIndex)))
+            let intermediatePointCP2 = CGPointMake(intermediatePointCPX2, intermediatePointCPY2)
+            
+            bezierPath.addCurveToPoint(nextPoint, controlPoint1: intermediatePointCP2, controlPoint2: nextPointCP)
+            
         }
         
-        let intermediatePointX = centerPoint.x + (intermediatePointDFC * CGFloat(sin(angleBetweenLines / 2.0)))
-        let intermediatePointY = centerPoint.y - (intermediatePointDFC * CGFloat(cos(angleBetweenLines / 2.0)))
-        let intermediatePoint = CGPointMake(intermediatePointX, intermediatePointY)
-        
-        print("\(centerPoint.x - intermediatePoint.x), \(centerPoint.y - intermediatePoint.y)")
-        
-        let controlLengthOne: CGFloat = 10.0
-        let paymentPointCPX: CGFloat = paymentPointX + controlLengthOne * cos(0)
-        let paymentPointCPY: CGFloat = paymentPointY + controlLengthOne * sin(0)
-        let paymentPointCP = CGPointMake(paymentPointCPX, paymentPointCPY)
-        
-        let controlLengthTwo: CGFloat = 5
-        let intermediatePointCPX: CGFloat = intermediatePointX - (controlLengthTwo * CGFloat(cos(angleBetweenLines / 2.0)))
-        let intermediatePointCPY: CGFloat = intermediatePointY - (controlLengthTwo * CGFloat(sin(angleBetweenLines / 2.0)))
-        let intermediatePointCP = CGPointMake(intermediatePointCPX, intermediatePointCPY)
-        
-        bezierPath.addCurveToPoint(intermediatePoint, controlPoint1: paymentPointCP, controlPoint2: intermediatePointCP)
-        
-        let nextPointX = centerPoint.x - CGFloat(businessPaymentsScaled[1]) * (centerPoint.x - outerPointsArray[1].x)
-        let nextPointY = centerPoint.y - CGFloat(businessPaymentsScaled[1]) * (centerPoint.y - outerPointsArray[1].y)
-        let nextPoint = CGPointMake(nextPointX, nextPointY)
-        
-        let nextPointCPX = nextPointX - (controlLengthOne * CGFloat(cos(angleBetweenLines)))
-        let nextPointCPY = nextPointY - (controlLengthOne * CGFloat(sin(angleBetweenLines)))
-        let nextPointCP = CGPointMake(nextPointCPX, nextPointCPY)
-        
-        let intermediatePointCPX2 = intermediatePointX + (controlLengthTwo * CGFloat(cos(angleBetweenLines / 2.0)))
-        let intermediatePointCPY2 = intermediatePointY + (controlLengthTwo * CGFloat(sin(angleBetweenLines / 2.0)))
-        let intermediatePointCP2 = CGPointMake(intermediatePointCPX2, intermediatePointCPY2)
-        
-        bezierPath.addCurveToPoint(nextPoint, controlPoint1: intermediatePointCP2, controlPoint2: nextPointCP)
         bezierPath.stroke()
         
         /*
@@ -205,6 +220,11 @@ class Draw: UIView {
         //draw path
         CGContextStrokePath(context)
         */
+    }
+    
+    func calculateMagnitude(x: CGFloat, y: CGFloat) -> CGFloat {
+        let mag = sqrt(x * x + y * y)
+        return mag
     }
 
 }
